@@ -39,7 +39,7 @@ class WordleGame:
         history = []
 
         while attempt <= self.max_attempts:
-            guess = solver.make_guess()
+            guess = solver.choose_best_word()
             if guess not in self.word_list:
                 raise ValueError(f"Invalid guess: {guess}")
             
